@@ -19,11 +19,7 @@ zuul:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
   routes:
-    authentication:
-        path: /uaa/**
-        url: http://authentication:9999
-        stripPrefix: false
-        sensitiveHeaders:
+
 
 
 
