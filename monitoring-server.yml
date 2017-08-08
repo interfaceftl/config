@@ -1,5 +1,17 @@
 server:
   port: 7979
+  
+logging:
+  level:
+    org.springframework.security: INFO
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 
 ---
 spring:
@@ -16,3 +28,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+    registerWithEureka: true
+      
+   
