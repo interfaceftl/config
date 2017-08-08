@@ -1,18 +1,6 @@
 server:
   port: 7979
   
-logging:
-  level:
-    org.springframework.security: INFO
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 10000
-
 ---
 spring:
   profiles: default
