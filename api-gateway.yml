@@ -2,9 +2,6 @@ zuul:
   prefix: /api
   ignoredServices: '*'
   routes:
-    vets-service: /vet/**
-    visits-service: /visit/**
-    customers-service: /customer/**
     api-gateway: /gateway/**
 
 server:
@@ -20,8 +17,6 @@ spring.messages.basename: messages/messages
 ---
 spring:
   profiles: docker
-  zipkin:
-    baseUrl: http://tracing-server:9411
 eureka:
   client:
     serviceUrl:
