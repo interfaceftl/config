@@ -1,17 +1,17 @@
 # COMMON APPLICATION PROPERTIES
+    
+logging:
+  level:
+    org.springframework.security: INFO
 
-# start services on random port by default
-server.port: 0
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 
-# database init, supports mysql too
-petclinic.database: mysqldb
-spring:
-  datasource:
-    schema: classpath*:db/${petclinic.database}/schema.sql
-    data: classpath*:db/${petclinic.database}/data.sql
-  sleuth:
-    sampler:
-      percentage: 1.0
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
@@ -19,5 +19,4 @@ spring.jpa.hibernate.ddl-auto: none
 # Spring Boot 1.5 makes actuator secure by default
 management.security.enabled: false
 
-# Logging
-logging.level.org.springframework: INFO
+
