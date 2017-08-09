@@ -3,7 +3,7 @@ zuul:
   ignoredServices: '*'
   routes:
     api-gateway: /gateway/**
-    customers-service: /customer/**
+    customer-server: /customer/**
 
 server:
   port: 8080
