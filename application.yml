@@ -32,13 +32,13 @@ spring:
     username: root
     password: petclinic
     driverClassName: com.mysql.jdbc.Driver
-    schema: classpath*:db/${petclinic.database}/schema.sql
-    data: classpath*:db/${petclinic.database}/data.sql
+    schema: classpath*:db/mysql/schema.sql
+    data: classpath*:db/mysql/data.sql
 
       
 
 # JPA
-spring.jpa.hibernate.ddl-auto: none
+# spring.jpa.hibernate.ddl-auto: none
 
 # Spring Boot 1.5 makes actuator secure by default
 management.security.enabled: false
