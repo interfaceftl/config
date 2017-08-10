@@ -28,7 +28,7 @@ spring:
       dialect: org.hibernate.dialect.MySQL5Dialect
       naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
   datasource:
-    url: jdbc:mysql://${service_name}-db:3306/petclinic?createDatabaseIfNotExist=true&useSSL=false
+    url: jdbc:mysql://${SERVICE_NAME}:3306/petclinic?createDatabaseIfNotExist=true&useSSL=false
     username: root
     password: petclinic
     driverClassName: com.mysql.jdbc.Driver
