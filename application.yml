@@ -14,7 +14,10 @@ hystrix:
 spring:
   rabbitmq:
     host: rabbitmq
-    
+
+eureka:
+  instance:
+    prefer-ip-address: true
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
