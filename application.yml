@@ -15,30 +15,27 @@ hystrix:
 eureka:
   instance:
     prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: http://discovery-server:8761/eureka/
       
-spring:
-  jpa:
-    database: MYSQL
-    show-sql: true
-    hibernate:
-      ddl-auto: create
-      dialect: org.hibernate.dialect.MySQL5Dialect
-      naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
-  datasource:
-    url: jdbc:mysql://${SERVICE_NAME}:3306/petclinic?createDatabaseIfNotExist=true&useSSL=false
-    username: root
-    password: petclinic
-    driverClassName: com.mysql.jdbc.Driver
-    schema: classpath*:db/mysql/schema.sql
-    data: classpath*:db/mysql/data.sql
+# spring:
+#   jpa:
+#     database: MYSQL
+#     show-sql: true
+#     hibernate:
+#       ddl-auto: create
+#       dialect: org.hibernate.dialect.MySQL5Dialect
+#       naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+#   datasource:
+ #    url: jdbc:mysql://${SERVICE_NAME}:3306/petclinic?createDatabaseIfNotExist=true&useSSL=false
+#     username: root
+#     password: petclinic
+#     driverClassName: com.mysql.jdbc.Driver
+#     schema: classpath*:db/mysql/schema.sql
+#     data: classpath*:db/mysql/data.sql
 
       
 
 # JPA
-# spring.jpa.hibernate.ddl-auto: none
+ spring.jpa.hibernate.ddl-auto: none
 
 # Spring Boot 1.5 makes actuator secure by default
 management.security.enabled: false
