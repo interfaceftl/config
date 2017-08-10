@@ -4,6 +4,7 @@ zuul:
   routes:
     api-gateway: /gateway/**
     customer-server: /customer/**
+    visits-service: /visit/**
 
 server:
   port: 8080
