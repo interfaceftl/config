@@ -11,7 +11,10 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 10000
-   
+spring:
+  rabbitmq:
+    host: rabbitmq
+    
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
