@@ -1,10 +1,14 @@
 zuul:
-  prefix: /api
   ignoredServices: '*'
   routes:
     api-gateway: /gateway/**
     customer-server: /customer/**
     visits-service: /visit/**
+    auth-server:
+        path: /uaa/**
+        url: http://auth-server:9999
+        stripPrefix: false
+        sensitiveHeaders:
 
 server:
   port: 8080
